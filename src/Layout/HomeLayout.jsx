@@ -1,9 +1,12 @@
+import { Outlet } from "react-router-dom";
 import CategoryBtn from "../Component-Layout/CategoryBtn";
 import LoginSection from "../Component-Layout/LoginSection";
+import CategoryPage from "../Components/CategoryPage";
 import Header from "../Components/Header";
 import MarqueeTest from "../Components/MarqueeTest";
 import Navbar from "../Components/Navbar";
 import logo from "../assets/assetsImage/logo.png";
+import Qzones from "../Components/Qzones";
 const HomeLayout = () => {
   return (
     <div className="font-Poppins">
@@ -20,9 +23,10 @@ const HomeLayout = () => {
          <aside className="text-[#706F6F] md:col-span-3">
            <CategoryBtn></CategoryBtn>
          </aside>
-         <section className="text-[#706F6F]  md:col-span-6">Dragon News Home</section>
+         <section className="text-[#706F6F]  md:col-span-6"><Outlet></Outlet></section>
          <aside className="text-[#706F6F] md:col-span-3">
            <LoginSection></LoginSection>
+           <Qzones></Qzones>
          </aside>
       </main>
     </div>
