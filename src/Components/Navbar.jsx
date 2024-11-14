@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <div className='flex justify-between items-center'>
             <div className="logo"><img src={logoMain} className='w-14 h-14 rounded-[50%]' alt="" /></div>
-            <div className="menu flex items-center gap-3">
+            <div className=" flex  gap-3">
                 <NavLink className="text-[#706F6F]" to="/">Home</NavLink>
                 <NavLink className="text-[#706F6F]" to="/">About</NavLink>
                 <NavLink className="text-[#706F6F]" to="/">Career</NavLink>
