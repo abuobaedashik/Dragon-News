@@ -1,27 +1,35 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Authcontex } from "../Provider/AuthProvider";
 
 const Register = () => {
-   const {createUser,setuser}=useContext(Authcontex)
+   const {createUser,setuser,updateUserProfile}=useContext(Authcontex)
+   const navigate =useNavigate()
+   const [error,seterror]=useState({})
     const handleSubmit=(e)=>{
         e.preventDefault()
        const form =new FormData (e.target)
        const name =form.get("name")
+       if (name.length <5) {
+        seterror({...error,name:"Name must be 5 cheracter long"})
+        return;
+       }
        const email =form.get("email")
        const  photo =form.get("photo")
        const password =form.get("password")
-       console.log({name,photo,email,password});
+      //  console.log({name,photo,email,password});
        createUser(email,password)
        .then((result)=>{
           const user =result.user;
           setuser(user)
-          console.log(user);
+          // console.log(user);
+          updateUserProfile({displayName:name,photoURL:photo})
+          .then(()=>{
+            navigate("/")
+          }).catch((error)=>alert(error))
        })
-       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode,errorMessage);
+       .catch((err) => {
+        seterror({...error, register:err.code})
       })
     }
     return (
@@ -41,6 +49,12 @@ const Register = () => {
               required
             />
           </div>
+          {
+              error.name && 
+              <label className="label text-xs text-red-500">
+                {error.name}
+             </label>
+            }
 
           <div className="form-control">
             <label className="label">
@@ -80,6 +94,12 @@ const Register = () => {
               required
             />
           </div>
+           {
+              error.register && 
+              <label className="label text-xs text-red-500">
+                {error.register}
+             </label>
+            }
           <div className="form-control mt-3">
             <button className="btn btn-accent bg-[#403F3F] text-[#ffffff] rounded-none">
               Register

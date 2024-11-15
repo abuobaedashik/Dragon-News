@@ -4,7 +4,7 @@ import NewsCard from './NewsCard';
 
 const CategoryPage = () => {
     const {data: news} =useLoaderData()
-    console.log(news);
+    // console.log(news);
     return (
         <div>
             <p className="text-left text-lg font-medium text-[#403F3F] ">

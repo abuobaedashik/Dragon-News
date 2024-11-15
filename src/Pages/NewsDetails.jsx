@@ -7,7 +7,7 @@ import DetailsEvery from "../Component-Layout/DetailsEvery";
 const NewsDetails = () => {
    const data =useLoaderData()
    const newsDtls =data.data[0]
-   console.log(newsDtls);
+//    console.log(newsDtls);
     return (
         <div className="font-Poppins">
             <header>

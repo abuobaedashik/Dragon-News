@@ -8,7 +8,7 @@ import ad from '../assets/assetsImage/bg.png'
 const Qzones = () => {
     return (
        <div className='mt-6 flex items-center gap-3 flex-col'>
-         <div className='bg-[#F3F3F3] flex items-center gap-3 flex-col'>
+         {/* <div className='bg-[#F3F3F3] flex items-center gap-3 flex-col'>
             <p className="text-2xl font-semibold pt-3 items-start text-left text-[#131313c1] px-3">Q-Zone</p>
             <div className="my-8">
                 <img src={Swim} alt="Swim" />
@@ -22,7 +22,7 @@ const Qzones = () => {
             <div className="my-8">
                 <img src={Play} className='w-[230px]' alt="class" />
             </div>
-        </div>
+        </div> */}
         <div className='mt-6 bg-[#F3F3F3] flex items-center gap-3 flex-col'>
             <p className="text-2xl font-semibold pt-3 items-start text-left text-[#131313c1] px-3">Q-Zone</p>
             <div className="my-8">

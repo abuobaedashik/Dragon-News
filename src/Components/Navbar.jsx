@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import user from '../assets/assetsImage/user.png'
+import userimg from '../assets/assetsImage/user.png'
 import logoMain from '../assets/assetsImage/Brand-logo.webp'
 import { Authcontex } from '../Provider/AuthProvider';
 
@@ -15,7 +15,19 @@ const Navbar = () => {
                 <NavLink className="text-[#706F6F]" to="/">Career</NavLink>
             </div>
             <div className="profile flex items-center gap-2">
-                <div><img src={user} alt="" /></div>
+                {/* <div><img src={user} alt="" /></div> */}
+                {
+                user && user?.email ?
+                (<div className='flex flex-col items-center justify-center mr-4'>
+                    <img src={user?.photoURL} className='w-10 h-10 border object-cover border-[#403f3f] rounded-[50%]' alt="" />
+                   <p className="text-sm font-semibold text-[#706F6F]">{user?.displayName}
+                   </p>
+                </div>)
+                :
+                 (<div><img src={userimg } alt="" /></div>)
+               }
+
+               
                {
                 user && user?.email ?
                ( <button onClick={logOutUser} className='px-3 py-1 text-md text-white bg-[#403f3f]'>Logout</button>)
