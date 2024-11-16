@@ -5,6 +5,7 @@ import { Authcontex } from "../Provider/AuthProvider";
 import TopHeader from "../Component-Layout/TopHeader";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
+import Footer from "./Footer";
 
 const AllNews = () => {
   const { allnews } = useContext(Authcontex);
@@ -41,6 +42,9 @@ const AllNews = () => {
           <NavLink onClick={handleShowall}  className="border border-blue-500 text-[#13131369] px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
             Load More News
           </NavLink>
+        </div>
+        <div className="mt-5">
+         <Footer></Footer>
         </div>
     </div>
   );

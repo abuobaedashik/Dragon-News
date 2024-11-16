@@ -9,6 +9,7 @@ import logo from "../assets/assetsImage/logo.png";
 import Qzones from "../Components/Qzones";
 import TopHeader from "../Component-Layout/TopHeader";
 import CardLeft from "../Components/CardLeft";
+import Footer from "../Pages/Footer";
 
 const HomeLayout = () => {
   return (
@@ -39,6 +40,9 @@ const HomeLayout = () => {
           </aside>
         </main>
       </div>
+      <footer>
+         <Footer></Footer>
+      </footer>
     </div>
   );
 };

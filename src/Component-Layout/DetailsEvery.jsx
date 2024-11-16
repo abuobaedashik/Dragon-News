@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const DetailsEvery = ({ newsDtls }) => {
   return (
     <div className="text-lg font-medium text-[#403F3F] ">
-      <p className="mx-auto ml-10 mt-3">Dragon News</p>
+      <p className="mx-auto text-2xl mb-4 ml-10 mt-3 text-center font-bold">Details News</p>
       <div className=" mb-3 p-4 w-11/12 mx-auto px-6 pb-20 border">
         <p className="mt-2">
           <img

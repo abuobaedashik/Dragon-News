@@ -8,6 +8,9 @@ import NewsDetails from "../Pages/NewsDetails";
 import PrivateRotue from "./PrivateRotue";
 import AllNewsCard from "../Pages/AllNewsCard";
 import AllNews from "../Pages/AllNews";
+import About from "../Pages/About";
+import CareerStatictic from "../Pages/CareerStatictic";
+import Contact from "../Pages/Contact";
 
 const Router = createBrowserRouter([
     {
@@ -36,15 +39,15 @@ const Router = createBrowserRouter([
     },
     {
         path:"/about",
-        element:<PrivateRotue><p>Wlcome to about</p></PrivateRotue>
+        element:<PrivateRotue><About></About></PrivateRotue>
     },
     {
         path:"/career",
-        element:<PrivateRotue><p>Wlcome to career</p></PrivateRotue>
+        element:<PrivateRotue><CareerStatictic></CareerStatictic></PrivateRotue>
     },
     {
         path:"/contact",
-        element:<PrivateRotue><p>Wlcome to contact</p></PrivateRotue>
+        element:<Contact></Contact>
     },
     {
         path:'/auth',
