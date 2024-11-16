@@ -27,7 +27,7 @@ const Navbar = () => {
     return (
         <div className='flex justify-between flex-col md:flex-row items-center my-3'>
             {/* <div className="logo"><img src={logoMain} className='w-14 h-14 rounded-[50%]' alt="" /></div> */}
-            <div className=" flex  gap-4 flex-col">
+            <div className=" flex  gap-4 md:flex-row flex-col">
                 {link}
             </div>
             <div className="profile flex items-center gap-2">
