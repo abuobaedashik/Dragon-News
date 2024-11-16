@@ -7,28 +7,38 @@ import MarqueeTest from "../Components/MarqueeTest";
 import Navbar from "../Components/Navbar";
 import logo from "../assets/assetsImage/logo.png";
 import Qzones from "../Components/Qzones";
+import TopHeader from "../Component-Layout/TopHeader";
+import CardLeft from "../Components/CardLeft";
+
 const HomeLayout = () => {
   return (
     <div className="font-Poppins">
-      <header className="mx-auto w-11/12 ">
-        <Header></Header>
-      </header>
-       <section className=" md:flex items-center justify-center mt-2 hidden  mx-auto w-11/12">
-          <MarqueeTest></MarqueeTest>
-       </section>
-       <section className=" mt-6 mx-auto w-11/12">
+      <div className=" mx-auto bg-[#ffffff]">
+        <TopHeader></TopHeader>
+        <header className="mx-auto  w-[95%]">
+          <Header></Header>
+        </header>
+        <section className=" mt-6 mx-auto px-0  w-[95%] ">
           <Navbar></Navbar>
-       </section>
-      <main className="grid md:grid-cols-12 w-11/12 mx-auto gap-4 text-center my-8">
-         <aside className="text-[#706F6F] md:col-span-3">
-           <CategoryBtn></CategoryBtn>
-         </aside>
-         <section className="text-[#706F6F]  md:col-span-6"><Outlet></Outlet></section>
-         <aside className="text-[#706F6F] md:col-span-3">
-           <LoginSection></LoginSection>
-           <Qzones></Qzones>
-         </aside>
-      </main>
+        </section>
+        <div className="border border-t mx-auto mt-4 w-[95%]"></div>
+        <section className=" md:flex items-center justify-center  w-[95%] mt-2 hidden mx-auto">
+          <MarqueeTest></MarqueeTest>
+        </section>
+        <main className="grid md:grid-cols-12 mx-auto gap-4 text-center my-8  w-[95%]">
+          <aside className="text-[#706F6F] md:col-span-3">
+            <CategoryBtn></CategoryBtn>
+            <CardLeft></CardLeft>
+          </aside>
+          <section className="text-[#706F6F]  md:col-span-6 h-[2080px] overflow-scroll relative">
+            <Outlet></Outlet>
+          </section>
+          <aside className="text-[#706F6F] md:col-span-3">
+            <LoginSection></LoginSection>
+            <Qzones></Qzones>
+          </aside>
+        </main>
+      </div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWith
 
  export const Authcontex =createContext()
 const AuthProvider = ({children}) => {
+    const [allnews,setallnews]=useState([])
     const[user,setuser] =useState(null)
     const[loading,setloading] =useState(true)
     const auth = getAuth(app);
@@ -23,6 +24,11 @@ const AuthProvider = ({children}) => {
     const updateUserProfile =(updatedData)=>{
         return updateProfile(auth.currentUser,updatedData)
     }
+    useEffect(()=>{
+        fetch('https://openapi.programming-hero.com/api/news/category/08')
+        .then(res => res.json())
+        .then(data=>setallnews(data.data))
+    })
   
    useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth,currentUser=>{
@@ -41,7 +47,8 @@ const AuthProvider = ({children}) => {
       logOutUser,
       SignInUser,
       loading,
-      updateUserProfile
+      updateUserProfile,
+      allnews
    }
     return <Authcontex.Provider value={authInfo}>{children}</Authcontex.Provider>
 };

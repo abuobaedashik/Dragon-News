@@ -6,6 +6,8 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import NewsDetails from "../Pages/NewsDetails";
 import PrivateRotue from "./PrivateRotue";
+import AllNewsCard from "../Pages/AllNewsCard";
+import AllNews from "../Pages/AllNews";
 
 const Router = createBrowserRouter([
     {
@@ -29,6 +31,22 @@ const Router = createBrowserRouter([
         loader:({params})=>fetch(`https://openapi.programming-hero.com/api/news/${params.id}`)
     },
     {
+      path:"/all/",
+      element:<PrivateRotue><AllNews></AllNews></PrivateRotue>
+    },
+    {
+        path:"/about",
+        element:<PrivateRotue><p>Wlcome to about</p></PrivateRotue>
+    },
+    {
+        path:"/career",
+        element:<PrivateRotue><p>Wlcome to career</p></PrivateRotue>
+    },
+    {
+        path:"/contact",
+        element:<PrivateRotue><p>Wlcome to contact</p></PrivateRotue>
+    },
+    {
         path:'/auth',
         element:<Auth></Auth>,
         children:[
@@ -44,7 +62,7 @@ const Router = createBrowserRouter([
     },
     {
         path:'*',
-        element:<h2>Error</h2>
+        element:<h2 className="text-3xl font-bold min-h-screen flex items-center justify-center text-red-700">Page Not Found</h2>
     }
 ])
 

@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Marquee from 'react-fast-marquee';
+import { Authcontex } from '../Provider/AuthProvider';
+import MarqueCard from './MarqueCard';
 
 const MarqueeTest = () => {
+   const {allnews}=useContext(Authcontex)
     return (
-        <div className='flex items-center justify-center bg-[#F3F3F3] px-3 py-4  '>
-            <div className="text-md text-[#ffffff] bg-[#D72050] px-2 py-1 mx-3 my-1">
-                Latest
-           </div>
-           <Marquee pauseOnHover className='space-x-3 '>
-            <span className='mx-6'> Match Highlights: Germany vs Spain — as it happened   </span>! <span className='mx-6'> Braking News</span>
-            <span className='mx-6'> Match Highlights: Germany vs Spain — as it happened   </span>! <span className='mx-6'> Braking News</span>
+        <div className='flex items-center justify-center  w-full'>
+           <Marquee pauseOnHover className=' w-full'>
+                {
+                    allnews.map(everynews=><MarqueCard key={everynews._id} everynews={everynews}></MarqueCard>)
+                }
            </Marquee>
         </div>
     );

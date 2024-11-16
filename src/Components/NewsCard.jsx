@@ -7,12 +7,12 @@ import { toast, ToastContainer } from 'react-toastify';
   import "react-toastify/dist/ReactToastify.css";
 
 const NewsCard = ({ everyNews }) => {
-  const {_id,author,img,thumbnail_url,details,total_view,rating,title} = everyNews;
+  const {_id,author,img,thumbnail_url,details,total_view,rating,title,image_url} = everyNews;
   // const handleReadMone=()=>{
   //   return alert("Login First to access This Page")
   // }
   return (
-    <div className="my-5 mx-auto bg-white shadow-lg rounded-lg overflow-hidden px-4">
+    <div className="my-8 mx-auto bg-[#F5F5F5] shadow-md overflow-hidden px-4 ">
     <div className="upparnav flex justify-between items-center py-4 px-0">
      <div className="flex items-center ">
       <img
@@ -32,8 +32,8 @@ const NewsCard = ({ everyNews }) => {
     </div>
    <div className="mx-auto">
    <img
-      className="w-full h-[350px] rounded-md object-center"
-      src={thumbnail_url}
+      className="w-full h-[350px] object-center"
+      src={image_url}
       alt="News Thumbnail"
     />
    </div>
