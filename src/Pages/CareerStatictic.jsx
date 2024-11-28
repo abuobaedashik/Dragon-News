@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TopHeader from "../Component-Layout/TopHeader";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
 
 const CareerStatictic = () => {
+  useEffect(() => {
+    document.title = "News | Career";
+  }, [])
   return (
     <div>
       <TopHeader></TopHeader>

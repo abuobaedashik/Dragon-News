@@ -6,15 +6,15 @@ const DetailsEvery = ({ newsDtls }) => {
     <div className="text-lg font-medium text-[#403F3F] ">
       <p className="mx-auto text-2xl mb-4 ml-10 mt-3 text-center font-bold">Details News</p>
       <div className=" mb-3 p-4 w-11/12 mx-auto px-6 pb-20 border">
+      <p className="text-4xl font-bold text-[#403F3F] my-8 ">
+          {newsDtls.title}
+        </p>
         <p className="mt-2">
           <img
             className="w-full object-cover"
             src={newsDtls.image_url}
             alt="image"
           />
-        </p>
-        <p className="text-3xl font-bold text-[#403F3F] my-5 ">
-          {newsDtls.title}
         </p>
         <p className="text-sm font-normal text-[#706F6F] my-3">
           {newsDtls.details}

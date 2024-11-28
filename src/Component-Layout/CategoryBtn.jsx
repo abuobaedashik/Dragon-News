@@ -14,7 +14,7 @@ const CategoryBtn = () => {
             <div className="text-lg font-medium items-start pl-3 text-[#9F9F9F] flex flex-col gap-4 mt-2">
              {category.map(category=><NavLink 
              className={({ isActive }) =>
-                isActive ? "text-green-500 font-bold" : "text-gray-500"
+                isActive ? "text-[#ffffff] bg-[#FF904D] px-3 py-1 rounded-md font-bold" : "text-gray-500"
               } 
              to={`category/${category.category_id}`}
               key={category.category_id}>{category.category_name}</NavLink>)}

@@ -11,6 +11,10 @@ import AllNews from "../Pages/AllNews";
 import About from "../Pages/About";
 import CareerStatictic from "../Pages/CareerStatictic";
 import Contact from "../Pages/Contact";
+import 'animate.css';
+import VideoPage from "../Pages/VideoPage";
+import AboutDev from "../Pages/About";
+import AboutMain from "../Pages/AboutMain";
 
 const Router = createBrowserRouter([
     {
@@ -39,11 +43,11 @@ const Router = createBrowserRouter([
     },
     {
         path:"/about",
-        element:<PrivateRotue><About></About></PrivateRotue>
+        element:<AboutMain></AboutMain>
     },
     {
-        path:"/career",
-        element:<PrivateRotue><CareerStatictic></CareerStatictic></PrivateRotue>
+        path:"/video",
+        element:<PrivateRotue><VideoPage></VideoPage></PrivateRotue>
     },
     {
         path:"/contact",

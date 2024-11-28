@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontex } from "../Provider/AuthProvider";
 
@@ -24,6 +24,9 @@ const Login = () => {
         seterror({...error, login:err.code})
      })
    }
+   useEffect(() => {
+    document.title = "News | Login";
+  }, [])
     return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-8">

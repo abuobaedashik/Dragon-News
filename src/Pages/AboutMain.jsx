@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
+import AboutDev from "./About";
 import TopHeader from "../Component-Layout/TopHeader";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
-import Contactsec from "../Components/Contactsec";
+import About from "./About";
 import Footer from "./Footer";
 
-const Contact = () => {
-  useEffect(() => {
-    document.title = "News | Contact";
-  }, [])
+const AboutMain = () => {
   return (
     <div>
       <TopHeader></TopHeader>
@@ -18,14 +16,12 @@ const Contact = () => {
       <section className=" mt-6 mx-auto px-0  w-[95%] ">
         <Navbar></Navbar>
       </section>
-      <div className="border border-t mx-auto mt-4 w-[95%]">
-        <Contactsec></Contactsec>
-      </div>
-       <div className="mt-5">
-        <Footer></Footer>
-       </div>
+      <About></About>
+      <div className="foot mt-5">
+       <Footer></Footer>
+        </div>
     </div>
   );
 };
 
-export default Contact;
+export default AboutMain;

@@ -23,6 +23,9 @@ const AllNews = () => {
   const handleShowall = () => {
     setshowall((prev) => !prev);
   };
+  useEffect(() => {
+    document.title = "News | All News";
+  }, [])
   return (
     <div>
       <TopHeader></TopHeader>

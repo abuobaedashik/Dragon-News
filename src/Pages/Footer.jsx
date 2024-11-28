@@ -9,8 +9,8 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-[#222222] text-[#ffffff] min-h-screen">
-      <footer className="grid md:grid-cols-3 grid-cols-1 text-left gap-8 px-5 pt-10   border-b pb-28 mx-auto w-[95%] border-[#353535]">
+    <div className="bg-[#222222] text-[#ffffff] ">
+      <footer className="grid md:grid-cols-3 grid-cols-1 text-left gap-8 px-5 pt-10   border-b pb-24 mx-auto w-[95%] border-[#353535]">
         <nav className=" flex flex-col justify-between items-start">
           <h6 className="footer-title text-left">
             Contact Info
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
         </nav>
       </footer>
-      <footer className="flex flex-col items-center justify-center px-40 pt-20 text-center mx-auto w-[95%]">
+      <footer className="flex flex-col items-center justify-center px-40 pt-14 text-center mx-auto w-[95%]">
         <p>
           Class aptent taciti sociosqu ad litora torquent per conubia nostra,
           per inceptos himenaeos. Cras eleifend egestas justo.
@@ -60,7 +60,7 @@ const Footer = () => {
           <FaTwitter />
         </div>
       </footer>
-      <div className="bg-[#1C1C1C] text-white mt-20 py-6 px-4 flex items-center justify-center text-center">
+      <div className="bg-[#1C1C1C] text-[#ffffffaf] mt-10 py-6 px-4 flex items-center justify-center text-center text-base">
          © Copyright Abu Obaed Ashik 2024. All Rights Reserved.
       </div>
     </div>

@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const MarqueCard = ({ everynews }) => {
-  const { title, author, image_url, total_view ,rating} = everynews;
+  const { title, author, image_url, total_view ,rating,_id} = everynews;
   return (
     <div className=" px-4 text-[#131313] w-[500px]">
       <div className=" flex items-center border-red-400 h-[200px] justify-between gap-4 ">
@@ -45,7 +46,7 @@ const MarqueCard = ({ everynews }) => {
               />
               <span className="num text-base text-[#131313b2] ml-3">{rating.number}</span>
             </div>
-            <button className="btn-xs w-20 rounded-sm bg-blue-700"> Details</button>
+            <NavLink to={`/news/${_id}`} className="btn-xs w-20 rounded-sm bg-blue-700"> Details</NavLink>
         </div>
       </div>
     </div>
